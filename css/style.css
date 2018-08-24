@@ -1,5 +1,243 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i");
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+}
+
+.wp-block-storypage-hero {
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #2db8ca;
+}
+.wp-block-storypage-hero .image-background {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center center;
+}
+.wp-block-storypage-hero .image-background div {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+.wp-block-storypage-hero section {
+  margin: 0 auto;
+  padding: 50px 20px 50px 20px;
+  z-index: 10;
+  max-width: 960px;
+}
+@media (min-width: 768px) {
+  .wp-block-storypage-hero section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.wp-block-storypage-hero section:after {
+  clear: both;
+  display: block;
+  content: " ";
+}
+.wp-block-storypage-hero h2, .wp-block-storypage-hero p, .wp-block-storypage-hero footer .btn, .wp-block-storypage-hero footer button {
+  font-family: "Roboto Condensed", Impact, Charcoal, sans-serif !important;
+  color: white;
+}
+.wp-block-storypage-hero header h2 {
+  font-size: 56px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.wp-block-storypage-hero header p {
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.wp-block-storypage-hero footer {
+  margin-bottom: 20px;
+}
+.wp-block-storypage-hero footer button, .wp-block-storypage-hero footer .btn {
+  display: inline-block;
+  margin: 0 20px 20px 0;
+  padding: 10px 20px;
+  border: 1px solid white;
+  text-decoration: none;
+}
+.wp-block-storypage-hero .image-feature {
+  display: block;
+  clear: both;
+  width: 250px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+.wp-block-storypage-hero .image-feature img {
+  border: 0;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .wp-block-storypage-hero.layout-left .image-feature {
+    clear: none;
+    margin-left: 0;
+  }
+  .wp-block-storypage-hero.layout-left header, .wp-block-storypage-hero.layout-left footer {
+    float: right;
+    width: calc(100% - 300px);
+  }
+}
+@media (min-width: 768px) {
+  .wp-block-storypage-hero.layout-right .image-feature {
+    clear: none;
+    margin-right: 0;
+  }
+  .wp-block-storypage-hero.layout-right header, .wp-block-storypage-hero.layout-right footer {
+    float: left;
+    width: calc(100% - 300px);
+  }
+}
+@media (min-width: 768px) {
+  .wp-block-storypage-hero.layout-left header, .wp-block-storypage-hero.layout-right header {
+    margin-top: 120px;
+  }
+}
+.wp-block-storypage-hero.layout-background {
+  background-color: transparent !important;
+}
+.wp-block-storypage-hero.layout-background .image-background {
+  display: block;
+}
+.wp-block-storypage-hero.layout-background .image-feature {
+  display: none;
+}
+.wp-block-storypage-hero.layout-background header, .wp-block-storypage-hero.layout-background footer {
+  float: none;
+}
+
+.wp-block-storypage-hero-nested {
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #2db8ca;
+}
+.wp-block-storypage-hero-nested .image-background {
+  display: none;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center center;
+}
+.wp-block-storypage-hero-nested .image-background div {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+.wp-block-storypage-hero-nested section {
+  margin: 0 auto;
+  padding: 50px 20px 50px 20px;
+  z-index: 10;
+  max-width: 960px;
+}
+@media (min-width: 768px) {
+  .wp-block-storypage-hero-nested section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+.wp-block-storypage-hero-nested section:after {
+  clear: both;
+  display: block;
+  content: " ";
+}
+.wp-block-storypage-hero-nested main {
+  font-family: "Roboto Condensed", Impact, Charcoal, sans-serif !important;
+  margin-bottom: 20px;
+}
+.wp-block-storypage-hero-nested main h1, .wp-block-storypage-hero-nested main h2, .wp-block-storypage-hero-nested main h3, .wp-block-storypage-hero-nested main h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 56px;
+  color: white;
+}
+.wp-block-storypage-hero-nested main p {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: white;
+}
+.wp-block-storypage-hero-nested main .wp-block-button__link {
+  display: inline-block;
+  margin: 0 20px 20px 0;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 0 !important;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+.wp-block-storypage-hero-nested .image-feature {
+  display: block;
+  clear: both;
+  width: 250px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+.wp-block-storypage-hero-nested .image-feature img {
+  border: 0;
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .wp-block-storypage-hero-nested.layout-left .image-feature {
+    clear: none;
+    margin-left: 0;
+  }
+  .wp-block-storypage-hero-nested.layout-left main {
+    float: right;
+    width: calc(100% - 300px);
+  }
+}
+@media (min-width: 768px) {
+  .wp-block-storypage-hero-nested.layout-right .image-feature {
+    clear: none;
+    margin-right: 0;
+  }
+  .wp-block-storypage-hero-nested.layout-right main {
+    float: left;
+    width: calc(100% - 300px);
+  }
+}
+@media (min-width: 768px) {
+  .wp-block-storypage-hero-nested.layout-left main, .wp-block-storypage-hero-nested.layout-right main {
+    margin-top: 120px;
+  }
+}
+.wp-block-storypage-hero-nested.layout-background {
+  background-color: transparent !important;
+}
+.wp-block-storypage-hero-nested.layout-background .image-background {
+  display: block;
+}
+.wp-block-storypage-hero-nested.layout-background .image-feature {
+  display: none;
+}
+.wp-block-storypage-hero-nested.layout-background main {
+  float: none;
 }
