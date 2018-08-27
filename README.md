@@ -17,4 +17,4 @@ Prototyping tool for Gutenberg blocks
 - Each block should be placed on a separate folder inside `blocks`.
 - Include the html file on `index.html`
 - Include the sass file on `sass/style.scss`
-- Common or theme styling styling should be placed on the `sass` folder
+- Common (or theme styling) should be placed on the `sass` folder
