@@ -9,35 +9,28 @@ body {
 }
 
 .wp-block-storypage-hero {
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 20px;
   background-color: #2db8ca;
-}
-.wp-block-storypage-hero .image-background {
-  display: none;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-size: cover;
   background-position: center center;
 }
-.wp-block-storypage-hero .image-background div {
+.wp-block-storypage-hero .bg-overlay {
   position: absolute;
-  display: block;
+  z-index: 1;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: black;
   opacity: 0.5;
+  display: none;
 }
 .wp-block-storypage-hero section {
+  position: relative;
+  z-index: 10;
   margin: 0 auto;
   padding: 50px 20px 50px 20px;
-  z-index: 10;
   max-width: 960px;
 }
 @media (min-width: 768px) {
@@ -75,54 +68,42 @@ body {
   border: 1px solid white;
   text-decoration: none;
 }
-.wp-block-storypage-hero .image-feature {
+.wp-block-storypage-hero figure {
   display: block;
   clear: both;
   width: 250px;
   min-height: 500px;
   margin: 0 auto;
 }
-.wp-block-storypage-hero .image-feature img {
+.wp-block-storypage-hero figure img {
   border: 0;
   width: 100%;
   height: auto;
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero.layout-left .image-feature {
+  .wp-block-storypage-hero .image-left figure {
     clear: none;
     margin-left: 0;
   }
-  .wp-block-storypage-hero.layout-left header, .wp-block-storypage-hero.layout-left footer {
+  .wp-block-storypage-hero .image-left header, .wp-block-storypage-hero .image-left footer {
     float: right;
     width: calc(100% - 300px);
   }
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero.layout-right .image-feature {
+  .wp-block-storypage-hero .image-right figure {
     clear: none;
     margin-right: 0;
   }
-  .wp-block-storypage-hero.layout-right header, .wp-block-storypage-hero.layout-right footer {
+  .wp-block-storypage-hero .image-right header, .wp-block-storypage-hero .image-right footer {
     float: left;
     width: calc(100% - 300px);
   }
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero.layout-left header, .wp-block-storypage-hero.layout-right header {
+  .wp-block-storypage-hero .image-left header, .wp-block-storypage-hero .image-right header {
     margin-top: 120px;
   }
-}
-.wp-block-storypage-hero.layout-background {
-  background-color: transparent !important;
-}
-.wp-block-storypage-hero.layout-background .image-background {
-  display: block;
-}
-.wp-block-storypage-hero.layout-background .image-feature {
-  display: none;
-}
-.wp-block-storypage-hero.layout-background header, .wp-block-storypage-hero.layout-background footer {
-  float: none;
 }
 
 .wp-block-storypage-hero-nested {
