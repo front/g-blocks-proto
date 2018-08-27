@@ -107,35 +107,28 @@ body {
 }
 
 .wp-block-storypage-hero-nested {
-  margin-bottom: 20px;
   position: relative;
+  margin-bottom: 20px;
   background-color: #2db8ca;
-}
-.wp-block-storypage-hero-nested .image-background {
-  display: none;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-size: cover;
   background-position: center center;
 }
-.wp-block-storypage-hero-nested .image-background div {
+.wp-block-storypage-hero-nested .bg-overlay {
   position: absolute;
-  display: block;
+  z-index: 1;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: black;
   opacity: 0.5;
+  display: none;
 }
 .wp-block-storypage-hero-nested section {
+  position: relative;
+  z-index: 10;
   margin: 0 auto;
   padding: 50px 20px 50px 20px;
-  z-index: 10;
   max-width: 960px;
 }
 @media (min-width: 768px) {
@@ -188,39 +181,27 @@ body {
   height: auto;
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero-nested.layout-left .image-feature {
+  .wp-block-storypage-hero-nested .image-left .image-feature {
     clear: none;
     margin-left: 0;
   }
-  .wp-block-storypage-hero-nested.layout-left main {
+  .wp-block-storypage-hero-nested .image-left main {
     float: right;
     width: calc(100% - 300px);
   }
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero-nested.layout-right .image-feature {
+  .wp-block-storypage-hero-nested .image-right .image-feature {
     clear: none;
     margin-right: 0;
   }
-  .wp-block-storypage-hero-nested.layout-right main {
+  .wp-block-storypage-hero-nested .image-right main {
     float: left;
     width: calc(100% - 300px);
   }
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero-nested.layout-left main, .wp-block-storypage-hero-nested.layout-right main {
+  .wp-block-storypage-hero-nested .image-left main, .wp-block-storypage-hero-nested .image-right main {
     margin-top: 120px;
   }
-}
-.wp-block-storypage-hero-nested.layout-background {
-  background-color: transparent !important;
-}
-.wp-block-storypage-hero-nested.layout-background .image-background {
-  display: block;
-}
-.wp-block-storypage-hero-nested.layout-background .image-feature {
-  display: none;
-}
-.wp-block-storypage-hero-nested.layout-background main {
-  float: none;
 }
