@@ -1,42 +1,79 @@
+@mixin desktop() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i');
 
 .wp-block-storypage-columns {
-  display: flex;
   font-family: 'Roboto Condensed', Impact, Charcoal, sans-serif !important;
   margin-bottom: 20px;
+
+  .columns-section-header {
+    width: 100%;
+    text-align: center;
+    h2 {
+      font-weight: normal;
+    }
+  }
+
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include desktop() {
+      flex-wrap: nowrap;
+    }
+
+    &.has-4-columns,
+    &.has-2-columns {
+      .column {
+        @include tablet() {
+          width: 50%;
+        }
+
+        @include desktop() {
+          width: 100%;
+        }
+      }
+    }
+  }
 
   .column {
     text-align: center;
     width: 100%;
-    margin: 10px;
-  }
+    padding: 10px;
+    box-sizing: border-box;
 
-  .column-image img {
-    max-width: 100%;
-    margin: 5px 0;
-  }
+    &__image img {
+      max-width: 100%;
+      margin: 5px 0;
+    }
 
-  .column-header {
-    font-weight: bold;
-    font-size: 20px;
-    margin: 5px 0 5px;
-  }
+    &__description {
+      margin: 10px 0 5px;
+    }
 
-  .column-description {
-    margin: 10px 0 5px;
-  }
+    &__cta {
+      margin: 15px 0 5px;
 
-  .column-cta {
-    margin: 15px 0 5px;
-
-    button {
-      font-family: 'Roboto Condensed', Impact, Charcoal, sans-serif !important;
-      display: inline-block;
-      padding: 10px 20px;
-      border: 1px solid #000000;
-      text-decoration: none;
-      background: transparent;
-      cursor: pointer;
+      .btn {
+        font-family: 'Roboto Condensed', Impact, Charcoal, sans-serif !important;
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px solid #000000;
+        text-decoration: none;
+        background: transparent;
+        cursor: pointer;
+        color: #000;
+      }
     }
   }
 }
