@@ -11,6 +11,7 @@ title: Index
   </select>
 </div>
 
+<div id="page">
 <!-- Include blocks here -->
 
 {% include_relative blocks/hero-nested/index.html %}
@@ -20,3 +21,30 @@ title: Index
 {% include_relative blocks/content-in-columns/index.html %}
 {% include_relative blocks/content-in-columns/no-images.html %}
 {% include_relative blocks/content-in-columns/no-cta.html %}
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded',function() {
+        document.querySelector('select[name="theme"]').onchange=changeTheme;
+    },false);
+
+    function changeTheme(event) {
+      // remove all
+      const themes = document.querySelectorAll('link[id^="theme-"]');
+      if (themes) {
+        themes.forEach(element => {
+          element.remove()
+        });
+      }
+
+      if (event.target.value) {
+        const styles = document.createElement('link');
+        styles.id='theme-' + event.target.value;
+        styles.rel = 'stylesheet';
+        styles.type = 'text/css';
+        styles.media = 'screen';
+        styles.href = 'css/' + event.target.value + '.css';
+        document.getElementsByTagName('head')[0].appendChild(styles);
+      }
+    }
+  </script>
