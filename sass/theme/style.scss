@@ -1,7 +1,42 @@
 // will be fixed next version of gutenberg (v3.7.1)
 .wp-block-image {
+  margin: 0;
+
   .aligncenter {
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+.wp-block-gallery {
+  margin: 0; // to avoid horizontal scroll
+
+  &.aligncenter,
+  &.alignleft,
+  &.alignright {
+    display: flex;
+  }
+
+  &.alignleft {
+    float: left;
+  }
+
+  &.alignright {
+    float: right;
+  }
+}
+
+.wp-block-table {
+  &.alignleft,
+  &.alignright {
+    width: auto;
+  }
+
+  &.alignleft {
+    float: left;
+  }
+
+  &.alignright {
+    float: right;
   }
 }
