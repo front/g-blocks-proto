@@ -9,6 +9,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.gbp-theme-select {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  z-index: 1;
+}
+.gbp-theme-select select {
+  color: black;
+}
+
 .wp-block-storypage-hero {
   position: relative;
   margin-bottom: 20px;
