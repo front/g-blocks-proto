@@ -13,7 +13,7 @@ title: Index
 
 <div id="page">
   <!-- Include blocks here -->
-  {% include_relative blocks/hero-nested/index.html %}
+  {% include_relative blocks/hero-section/index.html %}
   {% include_relative blocks/core/spacer/index.html %}
 
   {% include_relative blocks/content-in-columns/no-images.html %}
@@ -47,8 +47,11 @@ title: Index
   {% include_relative blocks/core/separator/index.html %}
   {% include_relative blocks/core/paragraph/index.html %}
   {% include_relative blocks/core/paragraph/index.html %}
-
   {% include_relative blocks/core/spacer/index.html %}
+
+  {% include_relative blocks/core/cover-image/index.html %}
+  {% include_relative blocks/core/spacer/index.html %}
+
   {% include_relative blocks/core/heading/index.html %}
   {% include_relative blocks/core/table/index.html %}
   {% include_relative blocks/core/spacer/index.html %}
@@ -60,16 +63,13 @@ title: Index
   {% include_relative blocks/core/paragraph/index.html %}
   {% include_relative blocks/core/spacer/index.html %}
 
-  {% include_relative blocks/hero/index.html %}
-  {% include_relative blocks/core/spacer/index.html %}
-
   {% include_relative blocks/content-in-columns/no-cta.html %}
   {% include_relative blocks/core/spacer/index.html %}
 
   {% include_relative blocks/core/image/full-width.html %}
 </div>
 
-<script>
+<script type="text/javascript">
     document.addEventListener('DOMContentLoaded',function() {
         document.querySelector('select[name="theme"]').onchange=changeTheme;
     },false);

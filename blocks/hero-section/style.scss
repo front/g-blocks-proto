@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i');
 
-.wp-block-storypage-hero {
+.wp-block-cloudblocks-hero-section {
   @mixin breakpoint () {
     @media(min-width: 768px) {
       @content;
@@ -14,7 +14,7 @@
   background-size: cover;
   background-position: center center;
 
-  // Overlay
+  // overlay
   .bg-overlay {
     position: absolute;
     z-index: 1;
@@ -47,36 +47,35 @@
     }
   }
 
-  h2, p, footer .btn, footer button {
+  main {
     font-family: "Roboto Condensed", Impact, Charcoal, sans-serif !important;
-    color: white;
-  }
+    margin-bottom: 20px;
 
-  header {
-    h2 {
-      font-size: 56px;
-      margin-top: 0px;
+    h1, h2, h3, h4 {
+      margin-top: 0;
       margin-bottom: 10px;
+      font-size: 56px;
+      color: white;
     }
     p {
-      font-size: 20px;
-      margin-top: 0px;
+      margin-top: 0;
       margin-bottom: 30px;
+      font-size: 20px;
+      color: white;
     }
-  }
-
-  footer {
-    margin-bottom: 20px;
-    button, .btn {
+    .wp-block-button__link {
       display: inline-block;
       margin: 0 20px 20px 0;
       padding: 10px 20px;
       border: 1px solid white;
+      border-radius: 0 !important;
+      color: white;
+      background-color: transparent;
       text-decoration: none;
     }
   }
 
-  figure {
+  .image-feature {
     display: block;
     clear: both;
     width: 250px;
@@ -92,15 +91,14 @@
     }
   }
 
-
   // Layout variations
   .image-left {
     @include breakpoint() {
-      figure {
+      .image-feature {
         clear: none;
         margin-left: 0;
       }
-      header, footer {
+      main {
         float: right;
         width: calc(100% - 300px);
       }
@@ -109,11 +107,11 @@
 
   .image-right {
     @include breakpoint() {
-      figure {
+      .image-feature {
         clear: none;
         margin-right: 0;
       }
-      header, footer {
+      main {
         float: left;
         width: calc(100% - 300px);
       }
@@ -122,9 +120,24 @@
 
   .image-left, .image-right {
     @include breakpoint() {
-      header {
+      main {
         margin-top: 120px;
       }
     }
   }
+}
+
+
+// InspectorControls overrides
+.panel_body-title-hide {
+  margin-top: -1em;
+  margin-bottom: 1em;
+   h2 {
+    display: none !important;
+   }
+   .components-panel__body {
+     border-top: none !important;
+     margin-top: 0 !important;
+     margin-bottom: 0 !important;
+   }
 }
