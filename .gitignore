@@ -3,4 +3,5 @@ _site
 .jekyll-metadata
 .ruby-version
 .rbenv-gemsets
-css/
+
+css

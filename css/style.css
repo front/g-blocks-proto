@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i");
 body {
   margin: 0;
   padding: 0;
@@ -20,16 +19,20 @@ body {
 }
 .gbp-theme-select select {
   color: black;
+  font-size: 1em;
+  line-height: 1;
+  height: 2em;
+  max-width: 200px;
 }
 
-.wp-block-storypage-hero {
+.wp-block-cloudblocks-hero-section {
   position: relative;
   margin-bottom: 20px;
   background-color: #2db8ca;
   background-size: cover;
   background-position: center center;
 }
-.wp-block-storypage-hero .bg-overlay {
+.wp-block-cloudblocks-hero-section .bg-overlay {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -40,7 +43,7 @@ body {
   opacity: 0.5;
   display: none;
 }
-.wp-block-storypage-hero section {
+.wp-block-cloudblocks-hero-section section {
   position: relative;
   z-index: 10;
   margin: 0 auto;
@@ -48,131 +51,33 @@ body {
   max-width: 960px;
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero section {
+  .wp-block-cloudblocks-hero-section section {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
-.wp-block-storypage-hero section:after {
+.wp-block-cloudblocks-hero-section section:after {
   clear: both;
   display: block;
   content: " ";
 }
-.wp-block-storypage-hero h2, .wp-block-storypage-hero p, .wp-block-storypage-hero footer .btn, .wp-block-storypage-hero footer button {
-  font-family: "Roboto Condensed", Impact, Charcoal, sans-serif !important;
-  color: white;
-}
-.wp-block-storypage-hero header h2 {
-  font-size: 56px;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.wp-block-storypage-hero header p {
-  font-size: 20px;
-  margin-top: 0px;
-  margin-bottom: 30px;
-}
-.wp-block-storypage-hero footer {
-  margin-bottom: 20px;
-}
-.wp-block-storypage-hero footer button, .wp-block-storypage-hero footer .btn {
-  display: inline-block;
-  margin: 0 20px 20px 0;
-  padding: 10px 20px;
-  border: 1px solid white;
-  text-decoration: none;
-}
-.wp-block-storypage-hero figure {
-  display: block;
-  clear: both;
-  width: 250px;
-  min-height: 500px;
-  margin: 0 auto;
-}
-.wp-block-storypage-hero figure img {
-  border: 0;
-  width: 100%;
-  height: auto;
-}
-@media (min-width: 768px) {
-  .wp-block-storypage-hero .image-left figure {
-    clear: none;
-    margin-left: 0;
-  }
-  .wp-block-storypage-hero .image-left header, .wp-block-storypage-hero .image-left footer {
-    float: right;
-    width: calc(100% - 300px);
-  }
-}
-@media (min-width: 768px) {
-  .wp-block-storypage-hero .image-right figure {
-    clear: none;
-    margin-right: 0;
-  }
-  .wp-block-storypage-hero .image-right header, .wp-block-storypage-hero .image-right footer {
-    float: left;
-    width: calc(100% - 300px);
-  }
-}
-@media (min-width: 768px) {
-  .wp-block-storypage-hero .image-left header, .wp-block-storypage-hero .image-right header {
-    margin-top: 120px;
-  }
-}
-
-.wp-block-storypage-hero-nested {
-  position: relative;
-  margin-bottom: 20px;
-  background-color: #2db8ca;
-  background-size: cover;
-  background-position: center center;
-}
-.wp-block-storypage-hero-nested .bg-overlay {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: black;
-  opacity: 0.5;
-  display: none;
-}
-.wp-block-storypage-hero-nested section {
-  position: relative;
-  z-index: 10;
-  margin: 0 auto;
-  padding: 50px 20px 50px 20px;
-  max-width: 960px;
-}
-@media (min-width: 768px) {
-  .wp-block-storypage-hero-nested section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-.wp-block-storypage-hero-nested section:after {
-  clear: both;
-  display: block;
-  content: " ";
-}
-.wp-block-storypage-hero-nested main {
+.wp-block-cloudblocks-hero-section main {
   font-family: "Roboto Condensed", Impact, Charcoal, sans-serif !important;
   margin-bottom: 20px;
 }
-.wp-block-storypage-hero-nested main h1, .wp-block-storypage-hero-nested main h2, .wp-block-storypage-hero-nested main h3, .wp-block-storypage-hero-nested main h4 {
+.wp-block-cloudblocks-hero-section main h1, .wp-block-cloudblocks-hero-section main h2, .wp-block-cloudblocks-hero-section main h3, .wp-block-cloudblocks-hero-section main h4 {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 56px;
   color: white;
 }
-.wp-block-storypage-hero-nested main p {
+.wp-block-cloudblocks-hero-section main p {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 20px;
   color: white;
 }
-.wp-block-storypage-hero-nested main .wp-block-button__link {
+.wp-block-cloudblocks-hero-section main .wp-block-button__link {
   display: inline-block;
   margin: 0 20px 20px 0;
   padding: 10px 20px;
@@ -182,42 +87,55 @@ body {
   background-color: transparent;
   text-decoration: none;
 }
-.wp-block-storypage-hero-nested .image-feature {
+.wp-block-cloudblocks-hero-section .image-feature {
   display: block;
   clear: both;
   width: 250px;
   min-height: 500px;
   margin: 0 auto;
 }
-.wp-block-storypage-hero-nested .image-feature img {
+.wp-block-cloudblocks-hero-section .image-feature img {
   border: 0;
   width: 100%;
   height: auto;
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero-nested .image-left .image-feature {
+  .wp-block-cloudblocks-hero-section .image-left .image-feature {
     clear: none;
     margin-left: 0;
   }
-  .wp-block-storypage-hero-nested .image-left main {
+  .wp-block-cloudblocks-hero-section .image-left main {
     float: right;
     width: calc(100% - 300px);
   }
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero-nested .image-right .image-feature {
+  .wp-block-cloudblocks-hero-section .image-right .image-feature {
     clear: none;
     margin-right: 0;
   }
-  .wp-block-storypage-hero-nested .image-right main {
+  .wp-block-cloudblocks-hero-section .image-right main {
     float: left;
     width: calc(100% - 300px);
   }
 }
 @media (min-width: 768px) {
-  .wp-block-storypage-hero-nested .image-left main, .wp-block-storypage-hero-nested .image-right main {
+  .wp-block-cloudblocks-hero-section .image-left main, .wp-block-cloudblocks-hero-section .image-right main {
     margin-top: 120px;
   }
+}
+
+.panel_body-title-hide {
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+.panel_body-title-hide h2 {
+  display: none !important;
+}
+.panel_body-title-hide .components-panel__body {
+  border-top: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .wp-block-storypage-columns {
