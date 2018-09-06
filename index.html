@@ -3,6 +3,14 @@ layout: default
 title: Index
 ---
 
+<div class="gbp-theme-select">
+  <select name="theme">
+    <option value="" selected>-- Select a theme --</option>
+    <option value="drupal/style">Drupal Bartik</option>
+    <option value="wordpress/style">WordPress Twentyseventeen</option>
+  </select>
+</div>
+
 <!-- Include blocks here -->
 
 {% include_relative blocks/hero-nested/index.html %}
