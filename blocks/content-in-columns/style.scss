@@ -15,6 +15,7 @@
 .wp-block-storypage-columns {
   font-family: 'Roboto Condensed', Impact, Charcoal, sans-serif !important;
   margin-bottom: 20px;
+  box-sizing: border-box;
 
   .columns-section-header {
     width: 100%;
@@ -26,32 +27,17 @@
   }
 
   .columns {
-    display: flex;
-    flex-wrap: wrap;
-
     @include desktop() {
-      flex-wrap: nowrap;
-    }
-
-    &.has-4-columns,
-    &.has-2-columns {
-      .column {
-        @include tablet() {
-          width: 50%;
-        }
-
-        @include desktop() {
-          width: 100%;
-        }
-      }
+      display: flex;
     }
   }
 
   .column {
+    @include desktop() {
+      flex: 1;
+    }
     text-align: center;
-    width: 100%;
     padding: 10px;
-    box-sizing: border-box;
 
     &__image img {
       max-width: 100%;
